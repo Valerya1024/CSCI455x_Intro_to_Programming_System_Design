@@ -1,0 +1,6 @@
+Constructing bookshelf with books 1,2,3,4,5,6,7,8,9 unit high:
+bookshelf: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Constructing bookshelf with books 1,10,3,19 unit high:
+bookshelf: [1, 10, 3, 19]
+

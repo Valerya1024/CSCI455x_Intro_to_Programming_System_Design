@@ -1,0 +1,93 @@
+Name: Xinyu Wu
+USC NetID: xwu26173
+CS 455 PA4
+Fall 2022
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+XW
+
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+none
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+none
+
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+
+class Rack
+    Constructor of Rack stores the given string. Private method getAllSubsets()
+    creates a TreeMap to count the frequency of each letter in the given string,
+    and sort the letters in alphabetical order. The traverse the key value pairs
+    in TreeMap and store the unique letters in a string and their frequencies in
+    an array of ints. The string and array consists a multiset, which are used as
+    the input for private method allSubsets(), to get all combination of letters
+    in the string in a recursive way. Public method findWord() gets all combinations
+    of letters in the rack by calling getAllSubsets(). For each combination of
+    letters get its anagram list by calling anagramDictionary.getAnagramsOf(combination).
+    Then for each word in the anagram calculate the score and put the word, score pairs in
+    a HashMap. At last, put all entries of the HashMap in a ArrayList, sort the ArrayList
+    with class MapValueComparator, and print the score: word pairs with private method
+    printWord().
+
+class AnagramDictionary
+    AnagramDictionary uses a HashMap<String, Set<String>> to organize the dictionary
+    words by the (multi)set of letters a word contains. The values of the map are HashSet
+    containing legal words that are anagrams to each other, and the key is the anagram
+    of the words whose letters are sorted in alphabetical order obtained with private
+    method sortString(string). Constructor of AnagramDictionary scans a given dictionary
+    file and organize the words in the HashMap. Public method getAnagramsOf(string)
+    gets the anagram set stored in HashMap with a sorted String as key return a ArrayList
+    converted from the set.
+
+class ScoreTable
+    Constructor ScoreTable creates an array of 26 ints, each int is a score corresponding
+    to a upper or lower case letter. Private method getCharScore(char) returns the score
+    of the given letter. Public method getStringScore(string) return the sum of scores
+    of all letters in the string.
+
+class WordFinder
+    WordFinder has the main method which takes an optional argument filename indicating
+    the path of dictionary file. It handles the FileNotFoundException and
+    IllegalDictionaryException thrown by AnagramDictionary. Then main method constructs
+    a AnagramDictionary with the given dictionary and prints "Type . to quit.". In a loop
+    it processes user input and creates a rack, then calls rack.findWord() to find and
+    print all legal words that can be formed from the letters on that rack with
+    rack.findWord(). After that the next loop starts. If the user input is ".", it will
+    not continue to next loop.
+
+class MapValueComparator
+    Implements Comparator class, used to compare Map entries. It compare words in
+    decreasing order by score. If words have the same scrabble score, compare them
+    in alphabetical order.
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
+none
+
+
+
+
+

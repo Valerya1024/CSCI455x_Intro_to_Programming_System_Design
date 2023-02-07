@@ -1,0 +1,177 @@
+Testing lookup method...
+DEBUG: Called growArr
+DEBUG: new capacity: 6
+Names in list: 
+Anne
+Bob
+Carol
+Don
+Ed
+Number of names in list [exp: 5]: 5
+Is Dave in the list? . . . false
+Is Abby in the list? . . . false
+Is Matt in the list? . . . false
+Is Anne in the list? . . . true
+Is Don in the list? . . . true
+Is Ed in the list? . . . true
+Do lookup in an empty list: 
+Names in list: 
+Number of names in list [exp: 0]: 0
+Do lookup in an empty list: 
+Is Sam in the list? . . . false
+Is Anne in the list? . . . false
+
+Testing insert method...
+Names in list [exp: <empty>]: 
+Number of names in list [exp: 0]: 0
+Attempt insert: Sam
+Names in list [exp: Sam]: 
+Sam
+Number of names in list [exp: 1]: 1
+Attempt insert: Joe
+Names in list [exp: Joe Sam]: 
+Joe
+Sam
+Number of names in list [exp: 2]: 2
+Attempt insert: Rosy
+Names in list [exp: Joe Rosy Sam]: 
+Joe
+Rosy
+Sam
+Number of names in list [exp: 3]: 3
+Attempt insert: Ralph
+DEBUG: Called growArr
+DEBUG: new capacity: 6
+Names in list [exp: Joe Ralph Rosy Sam]: 
+Joe
+Ralph
+Rosy
+Sam
+Number of names in list [exp: 4]: 4
+Attempt insert: Suzy
+Names in list [exp: Joe Ralph Rosy Sam Suzy]: 
+Joe
+Ralph
+Rosy
+Sam
+Suzy
+Number of names in list [exp: 5]: 5
+Attempt insert: Henry
+Names in list [exp: Henry Joe Ralph Rosy Sam Suzy]: 
+Henry
+Joe
+Ralph
+Rosy
+Sam
+Suzy
+Number of names in list [exp: 6]: 6
+Attempt insert: Jack
+DEBUG: Called growArr
+DEBUG: new capacity: 12
+Names in list [exp: Henry Jack Joe Ralph Rosy Sam Suzy]: 
+Henry
+Jack
+Joe
+Ralph
+Rosy
+Sam
+Suzy
+Number of names in list [exp: 7]: 7
+
+Testing remove method...
+DEBUG: Called growArr
+DEBUG: new capacity: 6
+Testing on empty list: 
+Attempt remove: Carol
+Carol was not present
+Names in list [exp: <empty>]: 
+Number of names in list [exp: 0]: 0
+Testing on non-empty list: 
+Original list: 
+Anne
+Bob
+Carol
+Don
+Ed
+Attempt remove: Scotty
+Scotty was not present
+Names in list [exp: Anne Bob Carol Don Ed]: 
+Anne
+Bob
+Carol
+Don
+Ed
+Number of names in list [exp: 5]: 5
+Attempt remove: Anne
+Names in list [exp: Bob Carol Don Ed]: 
+Bob
+Carol
+Don
+Ed
+Number of names in list [exp: 4]: 4
+Attempt remove: Ed
+Names in list [exp: Bob Carol Don]: 
+Bob
+Carol
+Don
+Number of names in list [exp: 3]: 3
+Attempt remove: Ed
+Ed was not present
+Names in list [exp: Bob Carol Don]: 
+Bob
+Carol
+Don
+Number of names in list [exp: 3]: 3
+Attempt remove: Carol
+Names in list [exp: Bob Don]: 
+Bob
+Don
+Number of names in list [exp: 2]: 2
+Attempt remove: Bob
+Names in list [exp: Don]: 
+Don
+Number of names in list [exp: 1]: 1
+Attempt remove: Don
+Names in list [exp: <empty>]: 
+Number of names in list [exp: 0]: 0
+
+Testing insert/lookup/remove methods together...
+Attempt insert: Joe
+Names in list [exp: Joe]: 
+Joe
+Number of names in list [exp: 1]: 1
+Attempt insert: Abby
+Names in list [exp: Abby Joe]: 
+Abby
+Joe
+Number of names in list [exp: 2]: 2
+Attempt remove: Abe
+Abe was not present
+Names in list [exp: Abby Joe]: 
+Abby
+Joe
+Number of names in list [exp: 2]: 2
+Attempt remove: Abby
+Names in list [exp: Joe]: 
+Joe
+Number of names in list [exp: 1]: 1
+Is Abby in the list? . . . false
+Is Joe in the list? . . . true
+Attempt insert: Sam
+Names in list [exp: Joe Sam]: 
+Joe
+Sam
+Number of names in list [exp: 2]: 2
+Attempt insert: Paul
+Names in list [exp: Joe Paul Sam]: 
+Joe
+Paul
+Sam
+Number of names in list [exp: 3]: 3
+Attempt remove: Paul
+Names in list [exp: Joe Sam]: 
+Joe
+Sam
+Number of names in list [exp: 2]: 2
+Is Sam in the list? . . . true
+

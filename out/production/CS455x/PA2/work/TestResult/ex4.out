@@ -1,0 +1,72 @@
+After constructing bookshelf with books 2,3,4,5,6,7,8,9 unit high:
+bookshelf: [2, 3, 4, 5, 6, 7, 8, 9]
+
+Test size()
+Expected: 8
+Result: 8
+Passed? true
+
+Test getHeight()
+position = 0
+Expected: 2
+Result: 2
+Passed? true
+position = 5
+Expected: 7
+Result: 7
+Passed? true
+position = 7
+Expected: 9
+Result: 9
+Passed? true
+
+Test isSorted()
+Expected: true
+Result: true
+Passed? true
+
+After adding a book 1 unit high at the front:
+bookshelf: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Test size()
+Expected: 9
+Result: 9
+Passed? true
+
+Test getHeight()
+position = 5
+Expected: 6
+Result: 6
+Passed? true
+
+Test isSorted()
+Expected: true
+Result: true
+Passed? true
+
+After adding a book 3 unit high at the back:
+bookshelf: [1, 2, 3, 4, 5, 6, 7, 8, 9, 3]
+
+Test size()
+Expected: 10
+Result: 10
+Passed? true
+
+Test isSorted()
+Expected: false
+Result: false
+Passed? true
+
+After removing a book at the back:
+bookshelf: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Test size()
+Expected: 9
+Result: 9
+Passed? true
+
+Test isSorted()
+Expected: true
+Result: true
+Passed? true
+
